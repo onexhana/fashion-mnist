@@ -24,7 +24,7 @@ def load_fashion_mnist(path, kind='train'):
 # Adam 옵티마이저 클래스
 class Adam:
     """Adam Optimizer"""
-    def __init__(self, lr=0.001, beta1=0.9, beta2=0.999):
+    def __init__(self, lr=0.0005, beta1=0.9, beta2=0.999):
         self.lr = lr
         self.beta1 = beta1
         self.beta2 = beta2
@@ -139,7 +139,7 @@ class NeuralNetwork:
         return np.argmax(Y_pred, axis=1)
 
 # 학습 함수
-def train(model, X_train, Y_train, X_val, Y_val, epochs=10, batch_size=64):
+def train(model, X_train, Y_train, X_val, Y_val, epochs=70, batch_size=32):
     """모델 학습 함수"""
     history = {'loss': [], 'val_loss': [], 'accuracy': [], 'val_accuracy': []}
     for epoch in range(epochs):
@@ -189,14 +189,14 @@ if __name__ == "__main__":
     Y_train = Y_train[validation_size:]
     
     # Adam 옵티마이저 설정
-    adam_optimizer = Adam(lr=0.001, beta1=0.9, beta2=0.999)
+    adam_optimizer = Adam(lr=0.0005, beta1=0.9, beta2=0.999)
     
     # 신경망 모델 설정 
-    layers = [784, 128, 64, 10]
+    layers = [784, 512, 256, 128, 10]
     model = NeuralNetwork(layers, optimizer=adam_optimizer, dropout_ratio=0.5, use_dropout=True)
     
     # 모델 학습
-    history = train(model, X_train, Y_train, X_val, Y_val, epochs=20, batch_size=64)
+    history = train(model, X_train, Y_train, X_val, Y_val, epochs=70, batch_size=32)
     
     # 테스트 데이터 평가
     Y_test_pred = model.predict(X_test)
