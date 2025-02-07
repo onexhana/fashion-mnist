@@ -1,7 +1,3 @@
-### 📝 README 작성 (업그레이드 버전)
-
-
-
 # Fashion-MNIST Classifier 프로젝트
 
 본 프로젝트는 **Fashion-MNIST** 데이터셋을 활용하여 의류 이미지 분류 신경망을 직접 구현한 사례입니다. 순수 **NumPy**와 **Python**으로 작성된 신경망 구조에 **Adam 옵티마이저**와 **드롭아웃(Dropout)** 기법을 적용해 모델 성능을 향상시켰으며, 학습 과정과 성능 평가를 **Matplotlib**을 통해 시각화했습니다. 
