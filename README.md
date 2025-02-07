@@ -102,10 +102,7 @@
    - 모델의 **일반화 성능**이 향상되어 테스트 정확도가 증가
 
 3. **시각화 예시**:
-
-| 손실 함수(Loss) 시각화 | 정확도(Accuracy) 시각화 |
-|------------------------|-------------------------|
-| ![Loss Graph](path_to_loss_graph.png) | ![Accuracy Graph](path_to_accuracy_graph.png) |
+<img width="365" alt="image" src="https://github.com/user-attachments/assets/af040b48-0317-43a5-8f39-8526afafbf0c" />
 
 ---
 
