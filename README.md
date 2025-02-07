@@ -100,11 +100,3 @@
 
 
 
-## 📁 프로젝트 구조
-
-fashion-mnist-classifier/
-│
-├── dataset/                   # Fashion-MNIST 데이터셋 (train, test)
-├── fashion_mnist_classifier.py # 메인 신경망 모델 코드
-└── README.md                  # 프로젝트 설명 파일
-```
